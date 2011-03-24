@@ -11,3 +11,4 @@ set expandtab
 set guifont=Monaco:h12
 
 map <F17> :NERDTreeToggle<CR>
+filetype plugin indent on
