@@ -7,15 +7,13 @@ call pathogen#runtime_append_all_bundles()
 set nowrap
 set number
 set expandtab
-set guifont=Monaco:h13
+set guifont=Monaco:h12
 
-map <F17> :NERDTreeToggle<CR>
 filetype plugin indent on
 
 set background=dark
 colorscheme solarized
 
-set cc=80
 set tabstop=4
 set shiftwidth=4
 
@@ -27,3 +25,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Various handy key commands
+map <leader>nt :NERDTreeToggle<CR>
+inoremap <C-l> <Space>=><Space>
