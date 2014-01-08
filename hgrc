@@ -1,8 +1,0 @@
-[extensions]
-prompt = ~/Library/Configs/prompt.py
-kilnauth = ~/Library/Configs/kilnauth.py
-hgext.extdiff = 
-
-[extdiff]
-cmd.ksdiff = /usr/local/bin/ksdiff-wrapper
-opts.ksdiff = hg

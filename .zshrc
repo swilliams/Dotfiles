@@ -1,4 +1,3 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -31,4 +30,20 @@ serve () {
 }
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/Users/krazyyak/bin:/Users/krazyyak/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/Users/krazyyak/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin
+eval "$(rbenv init -)"
+
+alias gs="git status"
+alias gcam="git commit -am "
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Quick way to rebuild the Launch Services database and get rid
+# # of duplicates in the Open With submenu.
+# alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+#
+
+# ImageMagick path
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+

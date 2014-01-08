@@ -1,0 +1,30 @@
+[user]
+	email = scott@swilliams.me
+	name = Scott Williams
+[core]
+	quotepath = false
+[color]
+	ui = auto
+
+[alias]
+    co = checkout
+    cb = checkout -b
+    s = status
+    cam = commit -am
+    pretty = log --pretty=format:'%h : %s' --graph -n 45
+    b = branch
+    pullb = pull --rebase
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge]
+	tool = Kaleidoscope
