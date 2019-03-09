@@ -13,22 +13,34 @@ cnoreabbrev W w
 
 set cc=80
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set nu
+set rnu
+
+" My shortcuts
+command Trim :%s/\s\+$//e
+command Noblank :g/^$/d
+
+" Swapfiles annoy me
+set noswapfile
+set nobackup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" Syntax Coloring
+au BufNewFile,BufRead *.coscript setf javascript
+au BufNewFile,BufRead *.cocoascript setf javascript
 
 " Plugin stuff
 :filetype plugin on
 :filetype plugin indent on
 
-" Maps
-map nt :NERDTreeToggle<cr>
-map <leader>ctf :CommandTFlush<cr>
-
-call pathogen#infect()
-call pathogen#helptags()
-
+syntax enable
+"set background=light
+"colorscheme pencil
+set background=dark
 
